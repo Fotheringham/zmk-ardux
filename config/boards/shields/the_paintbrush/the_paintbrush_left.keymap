@@ -27,34 +27,6 @@
 #define MIDDLE_NONES NONE(0, 0, 0)
 #define TRAILING_NONES NONE(0, 0, 0)
 
-#if !defined ARDUX_LAYER_CUSTOM
-#if defined ARDUX_RIGHT
-#define ARDUX_LAYER_CUSTOM                                            \
-		custom {                                                       \
-			label = "Custom";                                          \
-			bindings = <                                               \
-				LEADING_NONES                                          \
-				&kp C_MUTE &kp INS   &kp C_VOL_UP  &none               \
-				MIDDLE_NONES                                           \
-				&sk RSHFT  &kp PSCRN &kp C_VOL_DN  &mo LAYER_ID_CUSTOM \
-				TRAILING_NONES                                         \
-			>;                                                         \
-		};
-#endif
-#if defined ARDUX_LEFT
-#define ARDUX_LAYER_CUSTOM                                            \
-		custom {                                                       \
-			label = "Custom";                                          \
-			bindings = <                                               \
-				LEADING_NONES                                          \
-				&none               &kp C_VOL_UP  &kp EP_ON   &kp C_MUTE \
-				MIDDLE_NONES                                           \
-				&mo LAYER_ID_CUSTOM &kp C_VOL_DN  &kp PSCRN &sk RSHFT  \
-				TRAILING_NONES                                         \
-			>;                                                         \
-		};
-#endif
-#endif
 
 // Include main ardux.io keymap
 #include "../../../ardux.dtsi"
